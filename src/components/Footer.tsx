@@ -15,8 +15,11 @@ function Footer(props: any) {
 
   function heading(heading: string, url: string): JSX.Element {
     return (
-      <Link to={url}>
-        <h5 style={{ fontSize: "13px" }} className="text-white text-centre">
+      <Link target="_blank" to={url}>
+        <h5
+          style={{ fontSize: "13px" }}
+          className="text-white text-centre line-clamp-1 ml-8"
+        >
           {heading}
         </h5>
       </Link>
@@ -72,12 +75,30 @@ function Footer(props: any) {
           </div>
         </div>
 
+        <br />
+        <div className="border p-2 border-gray-400">
+          <Link to="https://www.geekforce.in" target="_blank">
+            <h4 className="text-white text-xs">
+              A Product From GeekForce Technologies
+            </h4>
+          </Link>
+          <Link
+            target="_blank"
+            to="https://www.linkedin.com/in/gunjan-sharma-a74332251/"
+          >
+            <h4 className="text-white text-xs mt-1">
+              Owned & Envisoned By Gunjan Sharma
+            </h4>
+          </Link>
+        </div>
+        <br />
+
         <div className="m-4">
-          <h5 className="text-center text-white font-sans text-xs font-bold">
+          <h5 className="text-center text-white text-xs font-bold">
             @Copyright 2024-2030
           </h5>
           <Link to={"https://www.linkedin.com/in/gunjan-sharma-a74332251/"}>
-            <h5 className="text-center m-1 text-white font-sans text-xs font-bold">
+            <h5 className="text-center m-1 text-white text-xs font-bold">
               Designed & Developed By Gunjan Sharma
             </h5>
           </Link>
