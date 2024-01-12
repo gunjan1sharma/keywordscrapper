@@ -15,7 +15,6 @@ import {
   InputAdornment,
   InputBaseClasses,
   InputLabel,
-  Link,
   List,
   Menu,
   MenuItem,
@@ -28,6 +27,7 @@ import LogoImage from "../assets/images/keyword.png";
 import { ColorContext } from "../extras/ColorContext";
 import MenuIcon from "@mui/icons-material/Menu";
 import SingleColor from "./SingleColor";
+import { Link } from "react-router-dom";
 
 const Wrapper = `
   position: fixed;
@@ -226,12 +226,12 @@ function UpMenu(props: any) {
 
         <div className="flex items-center justify-center">
           <img alt="" src={LogoImage} className="w-10 h-10 md:w-14 md:h-14" />
-          <h1
-            style={{ color: headingColor }}
-            className="p-5 text-center text-xl sm:text-4xl"
-          >
-            Keyword Finder Tool
-          </h1>
+          <Link to="https://www.keywords-lookup.web.app">
+            {" "}
+            <h1 className="p-5 text-center text-yellow-500 font-bold text-xl sm:text-4xl">
+              Keyword Lookup
+            </h1>
+          </Link>
         </div>
 
         <div></div>
